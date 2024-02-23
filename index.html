@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation to Our Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            background-image: url('momo2.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff; /* Set text color to be visible against the background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set the container height to the full viewport height */
+            
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for readability */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #510d51;
+        }
+        p {
+            color: #666;
+        }
+        .rsvp-button {
+            background-color: #ff7f50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .rsvp-button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>You're Invited!</h1>
+        <p>Join us for a special event:</p>
+        <h2>DUMPLING</h2>
+        <p>Date: Saturday, Feb 24th, 2024</p>
+        <p>Time: 1:00 PM</p>
+        <p>Location: suprise,</p>
+        <p>RSVP by February 24th</p>
+        <p>Contact: ur unkown</p>
+        <button class="rsvp-button" onclick="playMusicAndOpenLink()">RSVP Now</button>
+    </div>
+    <audio autoplay>
+        <source src="Na Tum Jano Na Ringtone (toneswall.com).mp3" type="audio/mpeg">
+    </audio>  
+    <audio id="myAudio" src="jalebi_baby.mp3"></audio>
+    <script
+    >
+        function playMusicAndOpenLink() {
+            // Play the music
+            const audio = document.getElementById('myAudio');
+            audio.play();
+
+            // Open the RSVP link in a new tab
+            window.open('https://forms.gle/9piZjx1EUd6rDGBw5', '_blank');
+
+            // You can customize this function further if needed
+            alert("Thank you for your attention my bootifull lady! We look forward to seeing you.");
+        }
+        window.onload = function() {
+            const audio = document.querySelector('audio');
+            audio.play();
+        };
+    </script>
+</body>
+</html>
